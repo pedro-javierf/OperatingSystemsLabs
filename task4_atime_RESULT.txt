@@ -1,0 +1,35 @@
+Questions:
+-What are the results from the four executions of “atime”? 
+-What are the differences? 
+
+Each execution of atime shows a different time for either the access, the modification, or the changes in the file:
+
+echo “write a text here” > text.txt    |  this one creates the file 
+Copy text.txt text2.txt                |  this one changes the last access date because it reads the file
+Chmod 600 text.txt                     |  this one changes the last change date because it changes permissions
+echo “write a new text here” > text.txt|  this one changes the last modified date because it writes to the file
+
+
+EXECUTION EXAMPLES (for reference):
+
+$ echo "aa" > text.txt
+
+$ date -r text.txt
+lun oct 19 09:57:09 CEST 2020
+
+$ ./time.out text.txt
+text.txt --> last access: Mon Oct 19 09:57:09 2020
+text.txt --> last modified: Mon Oct 19 09:57:09 2020
+text.txt --> last change: Mon Oct 19 09:57:09 2020
+
+$ chmod 600 text.txt
+
+$ ./time.out text.txt
+text.txt --> last access: Mon Oct 19 09:57:09 2020
+text.txt --> last modified: Mon Oct 19 09:57:09 2020
+text.txt --> last change: Mon Oct 19 09:57:52 2020
+
+
+
+
+
