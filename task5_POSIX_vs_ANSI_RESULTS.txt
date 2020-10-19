@@ -9,3 +9,5 @@ vs
 $ time ./ansi.out 1 10000000
 0.11user 0.01system 0:00.13elapsed 100%CPU (0avgtext+0avgdata 1160maxresident)k
 0inputs+19536outputs (0major+59minor)pagefaults 0swaps
+
+The direct use of syscalls is slower than the standard ANSI library
