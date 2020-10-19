@@ -1,0 +1,4 @@
+File1.txt has -rwxr-xr-x
+File1.txt has -rwxr-x---
+File1.txt has ---------- (no permissions for no-one)
+File1.txt has -rw-------
