@@ -1,0 +1,13 @@
+$ ./a.out PATH
+PATH --> /usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+
+$ ./a.out HOME USER NOTHING
+HOME --> /home/pedro
+USER --> pedro
+Variable NOTHING --> is not in the environment
+
+$ export NOTHING=NOTHINGIMPORTANT
+
+$ ./a.out HOME NOTHING
+HOME --> /home/pedro
+NOTHING --> NOTHINGIMPORTANT
